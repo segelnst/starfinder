@@ -1,3 +1,17 @@
-<html>
+<script type='text/javascript' src='js/ephemeris-0.1.0.js' charset='utf-8'></script>
+<script type='text/javascript'>
 
-</html>
+var date = {year: 2013, month: 1, day: 1, hours: 12, minutes: 4, seconds: 0};
+
+$const.tlong = 0; // longitude
+$const.glat = 0; // latitude
+
+$processor.init ();
+
+// sun, mercury, venus, moon, mars, jupiter, saturn, uranus, neptune, pluto, chiron, sirius
+var body = $moshier.body.sun;
+
+$processor.calc (date, body);
+
+console.log(body.position);
+</script>
